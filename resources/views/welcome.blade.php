@@ -10,20 +10,35 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/main.css">
+        @vite('resources/css/app.css')
 
     </head>
-    <body>
-        <div class="title text-center">
-            <h1>ContactsDB</h1>
-            <div class="options">
-                <a href="/contacts/create">Add Contact</a>
-                <a href="/contacts">View and Edit Contacts</a>
+    <body class="text-sky-700 bg-gradient-to-r from-cyan-400 to-sky-100">
+        <div class="text-4xl font-body">
+            <div class=" mt-32 mb-20 font-medium">
+                <nav class="space-x-8 flex justify-center">
+                        <div class="border-4 rounded-2xl border-sky-900">
+                            <a class="p-2" href="/">Home</a>
+                        </div>
+                        <div class="border-4 rounded-2xl border-sky-900">
+                            <a class="p-2" href="/contacts/create">Add Contact</a>
+                        </div>
+                        <div class="border-4 rounded-2xl border-sky-900">
+                            <a class="p-2" href="/contacts">View and Edit Contacts</a>
+                        </div>
+                </nav>
             </div>
-            <p class="popup">{{session('popup')}}</p>
+            <main class="align-middle">
+                <div class=" flex items-center justify-center space-x-9 mt-12">
+                    <div class="w-1/4">
+                        <img src="contacts-icon.png" alt="contacts logo">
+                    </div>
+                    <div class="flex justify-center text-6xl">
+                        <h1>ContactsDB</h1>
+                    </div>
+                    <p class="popup">{{session('popup')}}</p>
+                </div>
+            </main>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

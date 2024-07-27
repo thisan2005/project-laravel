@@ -10,10 +10,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="/css/main.css">
+        @vite('resources/css/app.css')
 
     </head>
-    <body>
+    <body class="text-sky-700 bg-gradient-to-r from-cyan-400 to-sky-100">
         <div class="title">
             <h1>Name - {{$contact->name}}</h1>
             <h1>About - {{$contact->about}}</h1>

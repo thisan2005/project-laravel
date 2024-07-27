@@ -6,20 +6,28 @@
 
         <title>Contacts</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="/css/main.css">
+        @vite('resources/css/app.css')
 
     </head>
-    <body>
-        <div class="title">
-            <h1>ContactsDB</h1>
+    <body class="text-sky-700 bg-gradient-to-r from-cyan-400 to-sky-100">
+        <div class="text-sky-700 font-body">
+            <div class="flex justify-center text-4xl mb-10 mt-10">
+                <h1>ContactsDB</h1>
+            </div>
             @foreach ($contacts as $contact)
-                <p>{{$contact->name}} - {{$contact->about}}</p>
+                <div>
+                    <p>Name: {{$contact->name}}</p>
+                    <p>About: {{$contact->about}}</p>
+                    <p>Birthday: {{$contact->dob}}</p>
+                    <p>Mobile Number: {{$contact->mobile}}</p>
+                    <p>Email: {{$contact->email}}</p>
+                    <p>Country: {{$contact->country}}</p>
+                </div>
             @endforeach
             <p class="popup">{{session('popup')}}</p>
+            <div>
+                <a href="/">Return to Home</a>
+            </div>
         </div>
     </body>
 </html>
