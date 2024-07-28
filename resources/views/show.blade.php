@@ -14,7 +14,7 @@
 
     </head>
     <body class="text-sky-700 bg-gradient-to-r from-cyan-400 to-sky-100 font-body">
-        <div class="flex justify-center text-4xl mb-10 mt-10">
+        <div class="flex justify-center text-4xl mb-12 mt-10">
             <h1 class="">{{$contact->name}}</h1>
         </div>
         <div class="flex justify-center items-center text-xl space-x-12">

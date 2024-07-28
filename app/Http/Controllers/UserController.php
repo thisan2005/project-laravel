@@ -5,13 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Redirect;
+use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
+
+use function Laravel\Prompts\search;
+use function Pest\Laravel\get;
 
 class UserController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $contacts = Contact::all();   
+
+        if($request->has('search')){
+            $contact_query = Contact::query();
+            $search_term = $request->get('search');
+            $contacts = $contact_query->where('name','like', '%'.$search_term.'%')->get();
+        }
+
+        $search_term = $request->get('search');
+        error_log($contacts->where('name','like', "%".$search_term."%"));
+
         return view('index',['contacts' => $contacts,]);
     }
 
