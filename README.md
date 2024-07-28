@@ -2,7 +2,7 @@
 ## Procedure to run the app on a local server
 ### Installing dependencies
 Go to the project directory and run command **composer install** to install dependencies </br>
-Copy the environment configuration usinf **cp .env.example .env** </br>
+Copy the environment configuration using **cp .env.example .env** </br>
 Then run **php artisan migrate** command to set up the database </br>
 
 ### Additional Content (tailwindcss)
