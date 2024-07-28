@@ -3,6 +3,7 @@
 ### Installing dependencies
 Go to the project directory and run command **composer install** to install dependencies </br>
 Copy the environment configuration usinf **cp .env.example .env** </br>
+Generate an app key using **php artisan key:generate** to encryption </br>
 Then run **php artisan migrate** command to set up the database </br>
 
 ### Additional Content (tailwindcss)
