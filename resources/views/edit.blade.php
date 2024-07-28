@@ -18,10 +18,10 @@
     <body class="font-body text-sky-700 bg-gradient-to-r from-cyan-400 to-sky-100">
         <div class="text-sky-700 ">
             <div class="flex justify-center text-4xl mb-10 mt-10">
-                <h1 class="">Create Contact</h1>
+                <h1 class="">Edit Contact</h1>
             </div>
             <div class="text-xl flex justify-center">
-                <form  id= "contact-form" action="/contacts" method="POST">
+                <form  id= "contact-form" action="/contacts/{{$contact->id}}/edit" method="POST">
                     <div>
                         <div class="grid grid-cols-3 place-items-center space-y-8" >
                             @csrf
@@ -29,7 +29,7 @@
                                 <label for="name">Name</label>
                             </div>
                             <div class="text-black">
-                                <input type="string" id="name" name="name"></input>
+                                <input type="string" id="name" name="name" value="{{$contact->name}}"></input>
                             </div>
                             <div class="text-red-500 text-sm">
                                 <p class="name-error"></p>
@@ -39,7 +39,7 @@
                                 <label for="about">About</label>
                             </div>
                             <div class="text-black">
-                                <input type="string" id="about" name="about">
+                                <input type="string" id="about" name="about" value="{{$contact->about}}">
                             </div>
                             <div>
                             </div>
@@ -48,7 +48,7 @@
                                 <label for="dob">Date of Birth</label>
                             </div>
                             <div class="text-black">
-                                <input type="string" id="dob" name="dob">   
+                                <input type="string" id="dob" name="dob" value="{{$contact->dob}}">   
                             </div>
                             <div class="text-red-500 text-sm">
                                 <p class="dob-error"></p>
@@ -58,7 +58,7 @@
                                 <label for="mobile">Mobile Number</label> 
                             </div>
                             <div class="text-black">
-                                <input type="string" id="mobile" name="mobile">
+                                <input type="string" id="mobile" name="mobile" value="{{$contact->mobile}}">
                             </div>
                             <div class="text-red-500 text-sm">
                                 <p class="mobile-error"></p>
@@ -68,7 +68,7 @@
                                 <label for="email">Email</label>                            
                             </div>
                             <div class="text-black">
-                                <input type="string" id="email" name="email">
+                                <input type="string" id="email" name="email" value="{{$contact->email}}">
                             </div>
                             <div class="text-red-500 text-sm">
                                 <p class="email-error"></p>
@@ -78,7 +78,7 @@
                                 <label for="country">Country</label>
                             </div>
                             <div class="text-black">
-                                <input type="string" id="country" name="country">
+                                <input type="string" id="country" name="country" value="{{$contact->country}}">
                             </div>
                             <div class="text-red-500 text-sm">
                                 <p class="country-error"></p>
@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="border-2 flex justify-center text-2xl mt-10 rounded-2xl border-sky-900 hover:shadow-xl">
-                        <input type="submit" value="Create contact">
+                        <input type="submit" value="Update contact">
                     </div>
                     <div class="border-2 flex justify-center text-2xl mt-10 rounded-2xl border-sky-900 hover:shadow-xl">
                         <a href="/">Back to home<a>

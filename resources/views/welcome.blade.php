@@ -17,14 +17,11 @@
         <div class="text-4xl font-body">
             <div class=" mt-32 mb-20 font-medium">
                 <nav class="space-x-8 flex justify-center">
-                        <div class="border-4 rounded-2xl border-sky-900">
-                            <a class="p-2" href="/">Home</a>
+                        <div class="border-2 border-sky-500 rounded-2xl hover:border-sky-900 hover:shadow-lg">
+                            <a class="p-4" href="/contacts/create">Add Contact</a>
                         </div>
-                        <div class="border-4 rounded-2xl border-sky-900">
-                            <a class="p-2" href="/contacts/create">Add Contact</a>
-                        </div>
-                        <div class="border-4 rounded-2xl border-sky-900">
-                            <a class="p-2" href="/contacts">View and Edit Contacts</a>
+                        <div class="border-2 border-sky-500 rounded-2xl hover:border-sky-900 hover:shadow-lg">
+                            <a class="p-4" href="/contacts">View and Edit Contacts</a>
                         </div>
                 </nav>
             </div>

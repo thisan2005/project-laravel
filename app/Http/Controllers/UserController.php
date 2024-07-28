@@ -35,6 +35,26 @@ class UserController extends Controller
         return redirect('/')->with('popup', 'Contact created successfully');
     }
 
+    public function update(Request $request, $id)
+    {
+        $contact = Contact::findOrFail($id);
+        $contact->name = request('name');
+        $contact->about = request('about');
+        $contact->dob = request('dob');
+        $contact->mobile = request('mobile');
+        $contact->email = request('email');
+        $contact->country = request('country');
+
+        $contact->update();
+        return redirect('/')->with('popup', 'Contact updated successfully');
+    }
+
+    public function edit($id)
+    {
+        $contact = Contact::findOrFail($id);
+        return view('edit',['contact' => $contact]);
+    }
+
     public function destroy($id)
     {
         $contact = Contact::findOrFail($id);
