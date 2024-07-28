@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="border-2 flex justify-center text-2xl mt-10 rounded-2xl border-sky-900 hover:shadow-xl">
-                        <input type="submit" value="Create contact">
+                        <input type="submit" value="Submit">
                     </div>
                     <div class="border-2 flex justify-center text-2xl mt-10 rounded-2xl border-sky-900 hover:shadow-xl">
                         <a href="/">Back to home<a>
