@@ -17,6 +17,7 @@ class UserController extends Controller
     {
         $contacts = Contact::all();   
 
+        // Filtering records by name
         if($request->has('search')){
             $contact_query = Contact::query();
             $search_term = $request->get('search');
@@ -29,6 +30,7 @@ class UserController extends Controller
         return view('index',['contacts' => $contacts,]);
     }
 
+    // Displaying single record
     public function show($id)
     {
         $contact = Contact::findOrFail($id);
@@ -37,6 +39,7 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+        // Getting data from forms
         $contact = new Contact();
         $contact->name = request('name');
         $contact->about = request('about');
@@ -51,6 +54,7 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
+        // Updating data
         $contact = Contact::findOrFail($id);
         $contact->name = request('name');
         $contact->about = request('about');
@@ -63,12 +67,14 @@ class UserController extends Controller
         return redirect('/')->with('popup', 'Contact updated successfully');
     }
 
+    //Editing data
     public function edit($id)
     {
         $contact = Contact::findOrFail($id);
         return view('edit',['contact' => $contact]);
     }
 
+    // Deleting data
     public function destroy($id)
     {
         $contact = Contact::findOrFail($id);

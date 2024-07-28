@@ -27,6 +27,7 @@
                 <li>About - {{$contact->about}}</li>
             </ul>
             <div class="pl-12">
+                {{-- Form action to delete records --}}
                 <form class="p-2 border-2 border-sky-500 rounded-2xl hover:border-sky-900 hover:shadow-lg mb-5" action="/contacts/{{$contact->id}}" method="POST">
                     @csrf
                     @method('DELETE')

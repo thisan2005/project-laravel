@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
         e.preventDefault();
 
+        //Hiding error messages
         $('.name-error').text('');
         $('.dob-error').text('');
         $('.mobile-error').text('');
