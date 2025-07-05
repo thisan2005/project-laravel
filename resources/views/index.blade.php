@@ -60,7 +60,6 @@
                     <p class="popup">{{session('popup')}}</p>
                 </div>
             </div>
-
         </div>
 
         <div class="flex justify-center text-2xl mt-10">
