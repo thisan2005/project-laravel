@@ -1,4 +1,4 @@
-# SE Intern Assignment
+# Laravel
 ## Procedure to run the app on a local server
 ### Installing dependencies
 Go to the project directory and run command **composer install** to install dependencies </br>
